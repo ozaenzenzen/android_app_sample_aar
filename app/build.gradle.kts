@@ -53,7 +53,7 @@ dependencies {
 //    implementation(files("libs/mylibrary-release.aar"))
 //    implementation(files("/Users/fauzanakmalmahdi/Documents/Main/Android Project/AppSample1/app/build/outputs/aar/app-release.aar"))
     // implementation(project(file("/Users/fauzanakmalmahdi/Documents/Main/Android Project/AppSample1/app/build/outputs/aar/app-release.aar")))
-    implementation("com.example.appsample1:konnek-android:1.0.0")
+    implementation("com.konnek_native:konnek-android:1.0.0")
 //    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 //    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 //    implementation("com.squareup.okhttp3:logging-interceptor:4.8.0")

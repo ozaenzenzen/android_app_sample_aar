@@ -1,14 +1,19 @@
 package com.example.appsample2
 
+import android.app.ActionBar.LayoutParams
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -31,8 +36,17 @@ class MainActivity : AppCompatActivity() {
         )
 
         val root = findViewById<ViewGroup>(R.id.main)
-        val fab2 = KonnekNative.getFloatingButton2(this)
-        root.addView(fab2)
+//        val fab2 = KonnekNative.getFloatingButton2(this)
+//        root.addView(fab2)
+        val fab3 = KonnekNative.getFloatingButton3(this)
+        root.addView(fab3)
+
+        println("fab3.layoutParams: ${fab3.layoutParams}")
+
+        // Jika pakai constraint layout
+        val layoutParams = fab3.layoutParams as ConstraintLayout.LayoutParams
+        layoutParams.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
+        layoutParams.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
