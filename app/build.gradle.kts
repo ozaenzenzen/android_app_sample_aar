@@ -15,7 +15,7 @@ android {
         applicationId = "com.example.appsample2"
         minSdk = 24
         targetSdk = 35
-        versionCode = 4
+        versionCode = 5
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -66,16 +66,8 @@ android {
 }
 
 dependencies {
-//    debugImplementation("com.example.flutter_module1:flutter_debug:1.0")
-//    releaseImplementation("com.example.flutter_module1:flutter_release:1.0")
-//    add("profileImplementation", "com.example.flutter_module1:flutter_profile:1.0")
-//    implementation(files("libs/mylibrary-release.aar"))
-//    implementation(files("/Users/fauzanakmalmahdi/Documents/Main/Android Project/AppSample1/app/build/outputs/aar/app-release.aar"))
-    // implementation(project(file("/Users/fauzanakmalmahdi/Documents/Main/Android Project/AppSample1/app/build/outputs/aar/app-release.aar")))
     implementation("com.konneknative:konnek-android:1.0.0")
-//    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-//    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-//    implementation("com.squareup.okhttp3:logging-interceptor:4.8.0")
+    implementation("com.github.ozaenzenzen:librarysample1:1.0.4")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
