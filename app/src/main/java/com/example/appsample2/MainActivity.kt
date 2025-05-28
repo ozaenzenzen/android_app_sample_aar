@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        KonnekNative.initializeSDK2(
+        KonnekNative.initializeSDK(
             this,
             id = "b699182d-5ff0-4161-b649-239234ff9cb9",
             secret = "1dc8e065-2915-4b4e-8df2-45040e8314bd",
@@ -36,9 +36,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val root = findViewById<ViewGroup>(R.id.main)
-//        val fab2 = KonnekNative.getFloatingButton2(this)
-//        root.addView(fab2)
-        val fab3 = KonnekNative.getFloatingButton3(this)
+        val fab3 = KonnekNative.getFloatingButton(this)
         root.addView(fab3)
 
         println("fab3.layoutParams: ${fab3.layoutParams}")
