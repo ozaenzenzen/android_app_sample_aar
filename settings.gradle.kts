@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { url = uri("https://jitpack.io") } // Add JitPack repository
     }
 }
 dependencyResolutionManagement {
@@ -16,11 +17,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") } // Add JitPack repository
         maven("https://storage.googleapis.com/download.flutter.io")
-        maven(url = "/Users/fauzanakmalmahdi/Documents/Main/Flutter Project/flutter_module1/build/host/outputs/repo")
-        maven {
-            url = uri("/Users/fauzanakmalmahdi/Documents/Main/Android Project/AppSample1/app/build")
-        }
+        maven("/Users/fauzanakmalmahdi/Documents/Main/Flutter Project/flutter_module1/build/host/outputs/repo")
+        maven("/Users/fauzanakmalmahdi/Documents/Main/Android Project/AppSample1/app/build")
     }
 }
 
